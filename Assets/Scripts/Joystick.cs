@@ -32,11 +32,11 @@ public class Joystick : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-             pointA = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+            pointA = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
             //circle.transform.position = pointA * 1;
             //outerCircle.transform.position = pointA * 1;
             //circle.GetComponent<SpriteRenderer>().enabled = true;
-           // outerCircle.GetComponent<SpriteRenderer>().enabled = true;
+            //outerCircle.GetComponent<SpriteRenderer>().enabled = true;
 
         }
             if (Input.GetMouseButton(0))
@@ -59,7 +59,7 @@ public class Joystick : MonoBehaviour
                 Vector2 offset = pointB - pointA;
                 Vector2 direction = Vector2.ClampMagnitude(offset, 1.0f);
                 moveCharacter(direction * 1);
-            circle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y);
+                //circle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y);
         }
         else
         {

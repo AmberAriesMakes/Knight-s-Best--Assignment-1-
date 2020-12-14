@@ -14,7 +14,8 @@ public class EnemyController : MonoBehaviour
     public float downBoundary;
     public float direction;
     public AudioSource damage;
-    
+    public GameObject Life;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,7 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
             HealthScore.healthval -= 1;
+            
         }
     }
     private void CheckBounds()
@@ -83,6 +85,7 @@ public class EnemyController : MonoBehaviour
         if (HealthScore.healthval == 0)
         {
             SceneManager.LoadScene("GameOver");
+            HealthScore.healthval = 3;
         }
     }
     private void OnDestroy()

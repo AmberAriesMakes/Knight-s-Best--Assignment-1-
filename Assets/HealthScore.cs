@@ -8,10 +8,12 @@ public class HealthScore : MonoBehaviour
 {
     public static int healthval = 3;
     Text LIVES;
+    
     // Start is called before the first frame update
     void Start()
     {
         LIVES = GetComponent<Text>();
+        
     }
 
     // Update is called once per frame
